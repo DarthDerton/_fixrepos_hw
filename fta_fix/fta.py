@@ -11,7 +11,7 @@ bot = telebot.TeleBot('6157744920:AAEcIepR896ltAoVxcExPsU-W4fbU1bC0-0')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-
+    print(message.chat.id)
     bot.send_message(message.chat.id, f'Приветствуем, <b>{message.from_user.first_name} ' 
                                       f'{message.from_user.last_name}</b>!\n'
                                       'Вы находитесь в чат-боте "FTA".\n'
