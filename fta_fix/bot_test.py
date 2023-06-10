@@ -12,14 +12,15 @@ import telebot
 from telebot import types
 from telebot import util
 
-should_skip = False
-
-
+# Токен для бота
 TOKEN = '6157744920:AAEcIepR896ltAoVxcExPsU-W4fbU1bC0-0'
+# id чата лички бота с юзером, получается через запуск бота - смотри строку 14 в fta.py
 CHAT_ID = '458200510'
+# id группового чата - получается аналагочиным образом, либо через web
+# -версию телеги, при заходе в чат в конце урла будет id, начинается с символа '-'
 GROUP_ID = '-904763706'
 
-
+# примеры использования устаревших функций
 def deprecated1_new_function():
     print("deprecated1_new_function")
 
@@ -39,8 +40,7 @@ def deprecated2_new_function():
 def deprecated2_old_function():
     print("deprecated2_old_function")
 
-
-@pytest.mark.skipif(should_skip, reason="No environment variables configured")
+# основной класс со всеми тестами. Названия тестов говорят сами за себя
 class TestTeleBot:
     def test_message_listener(self):
         msg_list = []
